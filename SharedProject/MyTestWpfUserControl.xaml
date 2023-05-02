@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="SharedProject.MyTestWpfUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="500">
+    <ScrollViewer HorizontalScrollBarVisibility="Visible" Background="LightGray">
+        <Grid>
+            <Button Content="Button" HorizontalAlignment="Left" Height="51" Margin="10,10,0,0" VerticalAlignment="Top" Width="128"/>
+            <CheckBox Content="CheckBox" HorizontalAlignment="Left" Height="21" Margin="165,10,0,0" VerticalAlignment="Top" Width="107"/>
+            <ComboBox HorizontalAlignment="Left" Height="25" Margin="165,36,0,0" VerticalAlignment="Top" Width="107"/>
+            <Label Content="This is a WPF control" HorizontalAlignment="Left" Height="29" Margin="13,72,0,0" VerticalAlignment="Top" Width="178"/>
+            <RadioButton Content="RadioButton" HorizontalAlignment="Left" Height="21" Margin="348,10,0,0" VerticalAlignment="Top" Width="96"/>
+            <TextBlock HorizontalAlignment="Left" Height="66" Margin="34,106,-44,-22" TextWrapping="Wrap" Text="another label with a text that is much much longer than what fits in this control and with a text that is much much longer than what fits in this control and with a text that is much much longer than what fits in this control" VerticalAlignment="Top" Width="493"/>
+            <ScrollBar HorizontalAlignment="Left" Height="80" Margin="298,9,0,0" VerticalAlignment="Top" Width="19"/>
+            <ScrollBar Orientation="Horizontal" HorizontalAlignment="Left" Height="21" Margin="348,49,0,0" VerticalAlignment="Top" Width="116"/>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

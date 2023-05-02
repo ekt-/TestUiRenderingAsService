@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>75d7d1a6-6711-473c-bbb8-e8510f717dca</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SharedProject</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Log.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MyTestWinFormUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MyTestWinFormUserControl.Designer.cs">
+      <DependentUpon>MyTestWinFormUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MyTestWpfUserControl.xaml.cs">
+      <DependentUpon>MyTestWpfUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SaveToImage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)MyTestWpfUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MyTestWinFormUserControl.resx">
+      <DependentUpon>MyTestWinFormUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
